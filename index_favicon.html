@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Scroll(s)</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!-- <meta http-equiv="Content-type" content="text/html;charset=UTF-8"> -->
+    <!-- <link rel="shortcut icon" href="favicon.png"> -->
+
+    <!-- css -->
+    <link rel="stylesheet" href="font.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index_media.css">
+
+    <!-- script: index_ie.js -->
+    <script type="text/javascript" src="index_ie.js"></script>
+
+    <!-- script: jquery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  </head>
+
+  <body>
+
+    <div style="width: 100px; height: 100000px; background: white;"></div>
+
+    <script>
+      const favicons = [
+          'favicons/favicon-01.png',
+          'favicons/favicon-02.png',
+          'favicons/favicon-03.png',
+          'favicons/favicon-04.png',
+          'favicons/favicon-05.png',
+          'favicons/favicon-06.png',
+          'favicons/favicon-07.png',
+      ];
+
+      let currentIndex = 0;
+
+      function changeFavicon() {
+          const link = document.querySelector("link[rel~='icon']");
+          if (!link) {
+              const newLink = document.createElement("link");
+              newLink.rel = "icon";
+              document.head.appendChild(newLink);
+          }
+          
+          document.querySelector("link[rel~='icon']").href = favicons[currentIndex];
+          
+          currentIndex = (currentIndex + 1) % favicons.length;
+      }
+
+      window.addEventListener('scroll', changeFavicon);
+
+    </script>
+    <!-- script  -->
+    <script type="text/javascript" src="index.js"></script>
+  </body>
+</html>
