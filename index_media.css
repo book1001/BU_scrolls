@@ -13,8 +13,11 @@
   }
 
   .sampletext {
-    h2 {
-      font-size: 190px;
+    a {
+      h2 {
+        padding-top: 170px;
+        font-size: 190px;
+      }
     }
   }
 
@@ -32,7 +35,10 @@
   }
 
   .info-2row {
-    grid-template-columns: 300px 370px 370px;
+    grid-template-columns: 300px 370px 370px 1370px;
+    grid-template-areas:
+        ". . . sampletext"
+        ". . . .";
   }
 
   .long1 {

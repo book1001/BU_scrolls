@@ -49,6 +49,15 @@ h2 {
   text-shadow: 0 0 14px #ffffff;
 }
 
+.sampletext {
+  a {
+    h2 {
+      padding-top: 0;
+      font-size: 400px;
+    }
+  }
+}
+
 /* h3 {
   margin-block-start: 0;
   margin-block-end: 0;
