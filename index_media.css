@@ -12,6 +12,12 @@
     font-size: 570px;
   }
 
+  .sampletext {
+    h2 {
+      font-size: 190px;
+    }
+  }
+
   h4 {
     font-size: 22px;
   }
@@ -20,6 +26,14 @@
     font-size: 18px;
   }
 
+
+  .content-info {
+    grid-template-columns: 1800px 2500px 1800px 2300px 16000px;
+  }
+
+  .info-2row {
+    grid-template-columns: 300px 370px 370px;
+  }
 
   .long1 {
     width: 300px;
