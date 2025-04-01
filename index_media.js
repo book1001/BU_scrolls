@@ -25,7 +25,7 @@ const animateSlider = () => {
   const step = timestamp => {
     if (!startTime) startTime = timestamp;
     const elapsed = timestamp - startTime;
-    const distance = (elapsed / 1000) * (translateValue / 5); // Adjust speed here
+    const distance = (elapsed / 1000) * (translateValue / 5); 
     sliderWrapper.style.transform = `translateX(-${distance}%)`;
 
     if (distance >= translateValue) {
@@ -64,7 +64,6 @@ function updateTextBasedOnWidth() {
   }
 }
 
-// 페이지 로드 및 창 크기 변경 시 이벤트 리스너 추가
 window.addEventListener("load", updateTextBasedOnWidth);
 window.addEventListener("resize", updateTextBasedOnWidth);
 
